@@ -26,6 +26,6 @@ pub fn nth(n: i32) -> u32 {
         }
     }
 
-    return primes[m - 1];
+    primes[m - 1]
 }
 
