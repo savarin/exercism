@@ -35,7 +35,11 @@ func Score(word string) int {
 	result := 0
 
 	for i := 0; i < len(word); i++ {
-		result += values[unicode.ToUpper(rune(word[i]))]
+		value, ok := values[unicode.ToUpper(rune(word[i]))]
+
+		if ok {
+			result += value
+		}
 	}
 
 	return result
