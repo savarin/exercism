@@ -1,25 +1,35 @@
 package bob
 
-import "strings"
+import "unicode"
 
 func Hey(remark string) string {
-	n := len(remark)
+	var hasDigit, hasUpper, hasLower, hasQuestion bool
 
-	if remark[n - 1] == '?' {
-		if remark == strings.ToUpper(remark) {
-			return "Calm down, I know what I'm doing!"
+	for _, char := range(remark) {
+		switch {
+		case unicode.IsDigit(char):
+			hasDigit = true
+		case unicode.IsLower(char):
+			hasLower = true
+			hasQuestion = false
+		case unicode.IsUpper(char):
+			hasUpper = true
+			hasQuestion = false
+		case char == '?':
+			hasQuestion = true
 		}
+	}
 
+	switch {
+	case hasQuestion && !hasLower:
+		return "Calm down, I know what I'm doing!"
+	case hasQuestion:
 		return "Sure."
-	}
-
-	if remark == strings.ToUpper(remark) {
+	case hasUpper && !hasLower:
 		return "Whoa, chill out!"
-	}
-
-	if remark == "" {
+	case !hasUpper && !hasLower &&!hasDigit:
 		return "Fine. Be that way!"
+	default:
+		return "Whatever."
 	}
-
-	return "Whatever."
 }
