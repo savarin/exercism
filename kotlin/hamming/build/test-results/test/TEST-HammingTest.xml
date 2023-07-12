@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HammingTest" tests="7" skipped="6" failures="0" errors="0" timestamp="2023-07-10T00:29:11" hostname="MacBook-Pro.local" time="0.013">
+<testsuite name="HammingTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-07-12T00:41:27" hostname="MacBook-Pro.local" time="0.01">
   <properties/>
-  <testcase name="single letter identical strands" classname="HammingTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="empty strands" classname="HammingTest" time="0.011"/>
-  <testcase name="long different strands" classname="HammingTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="disallow first strand longer" classname="HammingTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="long identical strands" classname="HammingTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="disallow second strand longer" classname="HammingTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="single letter different strands" classname="HammingTest" time="0.0">
-    <skipped/>
-  </testcase>
+  <testcase name="single letter identical strands" classname="HammingTest" time="0.007"/>
+  <testcase name="empty strands" classname="HammingTest" time="0.0"/>
+  <testcase name="long different strands" classname="HammingTest" time="0.0"/>
+  <testcase name="disallow first strand longer" classname="HammingTest" time="0.002"/>
+  <testcase name="long identical strands" classname="HammingTest" time="0.0"/>
+  <testcase name="disallow second strand longer" classname="HammingTest" time="0.0"/>
+  <testcase name="single letter different strands" classname="HammingTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
